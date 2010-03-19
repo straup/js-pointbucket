@@ -28,7 +28,6 @@ info.aaronland.geo.Pointbucket.prototype.store = function(data){
     var l_coords = this.bucket_label('coords');
     var l_lastloc = this.bucket_label('lastloc');
     var l_lastseen = this.bucket_label('lastseen');
-    var l_cycles = this.bucket_label('cycles');
 
     var lat = Number(data['latitude']).toFixed(6);
     var lon = Number(data['longitude']).toFixed(6);
@@ -114,11 +113,9 @@ info.aaronland.geo.Pointbucket.prototype.purge = function(label){
 	var l_coords = this.bucket_label('coords');
 	var l_lastloc = this.bucket_label('lastloc');
 	var l_lastseen = this.bucket_label('lastseen');
-	var l_cycles = this.bucket_label('cycles');
 
 	localStorage.setItem(l_coords, null);
 	localStorage.setItem(l_lastloc, null);
-	localStorage.setItem(l_cycles, null);
 	localStorage.setItem(l_lastseen, null);
 
 	ok = 1;
